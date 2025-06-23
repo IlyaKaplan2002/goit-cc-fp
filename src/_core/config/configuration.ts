@@ -81,8 +81,6 @@ const validate = (data: Record<string, unknown>) => {
       allowUnknown: true,
     });
 
-  console.log(JSON.stringify(data));
-
   if (result.error) {
     throw new Error(
       `Config validation error: ${result.error.message}, ${JSON.stringify(data)}`,
