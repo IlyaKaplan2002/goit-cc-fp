@@ -24,6 +24,9 @@ COPY . .
 # Expose the port.
 EXPOSE 3030
 
+# Clean old dist
+RUN rm -rf dist
+
 # Build
 RUN yarn build
 
