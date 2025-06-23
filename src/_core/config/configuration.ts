@@ -82,6 +82,8 @@ const validate = (data: Record<string, unknown>) => {
     });
 
   if (result.error) {
-    throw new Error(`Config validation error: ${result.error.message}`);
+    throw new Error(
+      `Config validation error: ${result.error.message}, ${JSON.stringify(data)}`,
+    );
   }
 };
