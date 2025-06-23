@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { SessionData } from 'auth/types';
-import configuration from '../../_core/config/configuration';
+import configuration from '_core/config/configuration';
 
 const config = configuration();
 

@@ -9,11 +9,11 @@ import { Post, Body, Controller, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
 import { SessionData } from './types';
-import { ROUTER } from '../_core/router';
-import { ResExceptionDto } from '../_core/exception/dto/exception.dto';
+import { ROUTER } from '_core/router';
+import { ResExceptionDto } from '_core/exception/dto/exception.dto';
 
 import { HttpAuthGuard } from './guards/http-auth.guard';
-import { AuthData } from '../_utils/decorators/auth-data.decorator';
+import { AuthData } from '_utils/decorators/auth-data.decorator';
 import { ResGetSessionDto } from './dto/session.dto';
 import { AuthDto, ResAuthDto } from './dto/auth.dto';
 import { ResponseMessage } from '_utils/decorators/response-message.decorator';

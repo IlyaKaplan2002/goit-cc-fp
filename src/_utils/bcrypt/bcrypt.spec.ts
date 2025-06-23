@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 import { BcryptService } from './bcrypt.service';
-import { ConfigModule } from '../../_core/config/config.module';
+import { ConfigModule } from '_core/config/config.module';
 
 describe('BcryptService', () => {
   let hash: string;

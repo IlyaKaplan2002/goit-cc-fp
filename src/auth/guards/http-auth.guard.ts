@@ -8,8 +8,8 @@ import {
 import { ModuleRef } from '@nestjs/core';
 import { Request } from 'express';
 import { SessionData } from '../types';
-import { TokenService } from '../../_utils/token/token.service';
-import { UnauthorizedException } from '../../_core/exception/exception';
+import { TokenService } from '_utils/token/token.service';
+import { UnauthorizedException } from '_core/exception/exception';
 
 export const HttpAuthGuard = ({
   isRefresh = false,

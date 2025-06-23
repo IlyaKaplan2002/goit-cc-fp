@@ -3,7 +3,7 @@ import { Controller, Get } from '@nestjs/common';
 import { name, version } from '../../package.json';
 
 import { ResPingDto } from './dto/ping.dto';
-import { ResponseMessage } from '../../src/_utils/decorators/response-message.decorator';
+import { ResponseMessage } from '_utils/decorators/response-message.decorator';
 
 @ApiTags('Ping')
 @Controller()

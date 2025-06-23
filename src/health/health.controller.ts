@@ -6,7 +6,7 @@ import {
   TypeOrmHealthIndicator,
 } from '@nestjs/terminus';
 
-import { HealthCheckException } from '../_core/exception/exception';
+import { HealthCheckException } from '_core/exception/exception';
 import { ResponseMessage } from '_utils/decorators/response-message.decorator';
 
 @ApiTags('Health')

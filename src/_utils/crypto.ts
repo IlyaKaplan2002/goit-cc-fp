@@ -1,7 +1,7 @@
 import { createCipheriv, createDecipheriv } from 'crypto';
 
-import configuration from '../_core/config/configuration';
-import { constants } from '../_core/config/constants';
+import configuration from '_core/config/configuration';
+import { constants } from '_core/config/constants';
 
 const config = configuration();
 const OUTPUT_FORMAT = 'hex';
