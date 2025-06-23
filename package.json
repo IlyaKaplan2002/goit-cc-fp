@@ -13,7 +13,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "yarn migrations:run & node -r tsconfig-paths/register dist/src/main",
     "typeorm": "ts-node ./node_modules/typeorm/cli",
-    "migrations:run": "yarn build & typeorm migration:run -d ./dist/src/_core/typeOrm/typeOrm.config.js",
+    "migrations:run": "typeorm migration:run -d ./dist/src/_core/typeOrm/typeOrm.config.js",
     "migration:generate": "yarn build & yarn typeorm -d ./src/_core/typeOrm/typeOrm.config.ts migration:generate ./migrations/migrations",
     "migration:create": "yarn build & yarn typeorm migration:create ./migrations/migrations",
     "migration:revert": "yarn build & yarn typeorm -d ./src/_core/typeOrm/typeOrm.config.ts migration:revert",
