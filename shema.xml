@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram name="AWS Architecture" id="AwsDiagram01">
+    <mxGraphModel dx="1299" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vpc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="700" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="User" style="shape=actor;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="80" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" value="Application Load Balancer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="130" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ecs" value="Amazon ECS (Fargate)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="120" y="260" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rds" value="Amazon RDS (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="110" y="410" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="secrets" value="AWS Secrets Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="345" y="460" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudwatch" value="Amazon CloudWatch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#039be5;" parent="1" vertex="1">
+          <mxGeometry x="330" y="110" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sns" value="SNS (Notifications)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbe5d6;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="530" y="110" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="autoscaling" value="Auto Scaling (ECS Tasks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f;" parent="1" vertex="1">
+          <mxGeometry x="345" y="340" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="costexplorer" value="Cost Explorer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#3c78d8;" parent="1" vertex="1">
+          <mxGeometry x="370" y="240" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="budgets" value="AWS Budgets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;" parent="1" vertex="1">
+          <mxGeometry x="560" y="220" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" style="endArrow=block;html=1;" parent="1" source="user" target="alb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" style="endArrow=block;html=1;" parent="1" source="alb" target="ecs" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" style="endArrow=block;html=1;" parent="1" source="ecs" target="rds" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" style="endArrow=block;html=1;" parent="1" source="ecs" target="secrets" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" style="endArrow=block;html=1;" parent="1" source="ecs" target="cloudwatch" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" style="endArrow=block;html=1;" parent="1" source="cloudwatch" target="sns" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" style="endArrow=block;html=1;" parent="1" source="ecs" target="autoscaling" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" style="endArrow=block;html=1;" parent="1" source="ecs" target="costexplorer" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" style="endArrow=block;html=1;" parent="1" source="sns" target="budgets" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pF4WR8686IMtBhiLv_tO-1" value="VPC" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
