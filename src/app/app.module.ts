@@ -1,5 +1,5 @@
 import { AppController } from './app.controller';
-import { AuthModule } from 'src/auth/auth.module';
+import { AuthModule } from 'auth/auth.module';
 import { ConfigModule } from '../_core/config/config.module';
 import { HealthModule } from '../health/health.module';
 import { LoggerModule } from '../_core/logger/logger.module';

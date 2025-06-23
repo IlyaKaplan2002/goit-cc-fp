@@ -16,7 +16,7 @@ import { HttpAuthGuard } from './guards/http-auth.guard';
 import { AuthData } from '../_utils/decorators/auth-data.decorator';
 import { ResGetSessionDto } from './dto/session.dto';
 import { AuthDto, ResAuthDto } from './dto/auth.dto';
-import { ResponseMessage } from 'src/_utils/decorators/response-message.decorator';
+import { ResponseMessage } from '_utils/decorators/response-message.decorator';
 
 @ApiResponse({
   status: 400,

@@ -5,16 +5,16 @@ import {
   Reflector,
 } from '@nestjs/core';
 import { Logger, ValidationPipe } from '@nestjs/common';
-import { corsOptionsDelegate, swaggerConfig } from 'src/_core/common';
+import { corsOptionsDelegate, swaggerConfig } from './_core/common';
 import { init, setupNestErrorHandler } from '@sentry/nestjs';
 
-import { AppModule } from 'src/app/app.module';
-import { BaseLogger } from 'src/_core/logger/base-logger/base-logger';
-import { GlobalExceptionFilter } from 'src/_core/exception/global.exception';
+import { AppModule } from './app/app.module';
+import { BaseLogger } from './_core/logger/base-logger/base-logger';
+import { GlobalExceptionFilter } from './_core/exception/global.exception';
 import { SwaggerModule } from '@nestjs/swagger';
-import { TransformInterceptor } from 'src/_utils/interceptors/response.interceptor';
-import { ValidationPipeOptions } from 'src/_core/pipe/validation.pipe';
-import configuration from 'src/_core/config/configuration';
+import { TransformInterceptor } from './_utils/interceptors/response.interceptor';
+import { ValidationPipeOptions } from './_core/pipe/validation.pipe';
+import configuration from './_core/config/configuration';
 
 const config = configuration();
 

@@ -7,7 +7,7 @@ import {
 } from '@nestjs/terminus';
 
 import { HealthCheckException } from '../_core/exception/exception';
-import { ResponseMessage } from 'src/_utils/decorators/response-message.decorator';
+import { ResponseMessage } from '_utils/decorators/response-message.decorator';
 
 @ApiTags('Health')
 @Controller()
